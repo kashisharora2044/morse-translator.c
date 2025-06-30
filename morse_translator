@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 char *getmorsecodefromchar(char c)//we give char here i.e eg: 'a'
 {
     switch(c){
@@ -47,14 +48,14 @@ char *getmorsecodefromchar(char c)//we give char here i.e eg: 'a'
 		}
 }
 void printmorsefromstring(char *str,size_t size){
-    for(i=0;i<size;i++){
+    for(int i=0;i<size;i++){
         printf("%s",getmorsecodefromchar(str[i]));//we print the string for that char 'a' ie .-
     }
     printf("\n");
 }
 int main(){
     char str[]="hello";
-    size_t size =strlen(str);
+    size_t size=strlen(str);
     printmorsefromstring(str,size);
     return 0;
 }
